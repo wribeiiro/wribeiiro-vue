@@ -10,12 +10,12 @@
           </div>
         </div>
         <div class="sidenav__link">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#education">Education</a>
-          <a href="#experience">Experience</a>
-          <a href="#work">Work</a>
-          <a href="#contact">Contact</a>
+          <router-link to="/" class="btn mr-5">Home</router-link>
+          <router-link to="/about" class="btn mr-5">About</router-link>
+          <router-link to="/education" class="btn mr-5">Education</router-link>
+          <router-link to="/experience" class="btn mr-5">Experience</router-link>
+          <router-link to="/work" class="btn mr-5">Work</router-link>
+          <router-link to="/contact" class="btn mr-5">Contact</router-link>
         </div>
         <div class="sidenav__footer">
 

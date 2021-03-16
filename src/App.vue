@@ -1,26 +1,11 @@
 <template>
-  <div id="app">
-    <div class="main">
-      <Header />
-      <Hero />
-      <About />
-      <section class="mypage-education" data-section="education">
-        <div class="mypage-narrow-content">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 col-md-pull-3">
-              <span class="heading-meta">Education</span>
-              <h2 class="mypage-heading">Education</h2>
-            </div>
-          </div>
-          <div class="row">
-            <Education 
-              :education-data="education"
-            >
-            </Education>
-          </div>
-        </div>
-      </section>
 
+  <div class="main">
+    <router-view></router-view>
+  </div>
+
+  <!-- 
+    <div class="main">
       <section class="mypage-experience" data-section="experience">
         <div class="mypage-narrow-content">
           <div class="row">
@@ -62,35 +47,16 @@
         </div>
       </section>
     </div>
-  </div>
+  -->
+    
 </template>
 
 <script>
-
-import Header       from './components/Header.vue'
-import Hero         from './components/Hero.vue'
-import About        from './components/About.vue'
-import Education    from './components/Education.vue'
-import Experience   from './components/Experience.vue'
-import Work         from './components/Work.vue'
-import Contact      from './components/Contact.vue'
 
 export default {
   name: 'App',
   data() {
     return {
-      education: [
-        {
-          title: "Graduated in Systems Analysis and Development At UNOPAR - University North of Paraná ",
-          date: "2015-2018",
-          id: 1
-        },
-        {
-          title: "Information systems (Studied for 1 year) At UNC - Contestado University",
-          date: "2014",
-          id: 2
-        },
-      ],
       xp: [
         {
           title: "Software Engineer at SoftExpert",
@@ -154,15 +120,7 @@ export default {
       ]
     }
   },
-  components: {
-    Header,
-    Hero,
-    About,
-    Education,
-    Experience,
-    Work,
-    Contact
-  }
+  components: {}
 }
 </script>
 

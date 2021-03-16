@@ -3,7 +3,7 @@ import Vue2Filters from 'vue2-filters'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 //import store from './store/store'
-//import router from './router/routes'
+import router from './router/routes'
 import App from './App.vue'
 Vue.use(Vue2Filters)
 
@@ -28,5 +28,5 @@ router.afterEach(() => {
 new Vue({
   render: h => h(App),
   //store,
-  //router
+  router
 }).$mount('#app')
