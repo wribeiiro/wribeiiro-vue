@@ -1,4 +1,4 @@
-# wribeiior-vue
+# wribeiiro-vue
 
 ## Project setup
 ```
