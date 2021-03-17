@@ -18,8 +18,6 @@
         </div>
       </div>
     </section>
-
-    Education
   </div>
 </template>
 
@@ -29,7 +27,7 @@ import Header from '../components/Header'
 import Education from '../components/Education'
 
 export default {
-  name: 'Education',
+  name: 'EducationPage',
   components: {
     Header,
     Education

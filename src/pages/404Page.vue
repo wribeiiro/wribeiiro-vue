@@ -1,13 +1,10 @@
 <template>
-    <div></div>
+    <div>404</div>
 </template>
 
 <script>
 export default {
-  name: 'Work',
-  props: {
-    msg: String
-  }
+  name: '404Page',
 }
 </script>
 

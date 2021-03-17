@@ -16,7 +16,10 @@
 export default {
   name: 'Contact',
   props: {
-    contactData: Array
+    contactData: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

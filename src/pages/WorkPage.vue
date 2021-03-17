@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'WorkPage',
   props: {
     msg: String
   }

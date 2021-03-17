@@ -5,7 +5,7 @@
           <div class="text-center me">
             <h1 class="name">Wellisson Ribeiro</h1>
             <span class="description">
-              <a href="#">Fullstack Developer</a> in Mafra-SC
+              <a href="#">Fullstack Developer</a> <br>in Mafra-SC
             </span>
           </div>
         </div>
@@ -25,12 +25,11 @@
 </template>
 
 <script>
+
 export default {
   name: 'Header',
-  props: {
-    msg: String
-  }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -48,15 +47,15 @@ export default {
   padding-top: 3em;
   padding-bottom: 40px;
   transition: 0.5s;
-  padding: 40px;
 }
 
 .sidenav .sidenav__link a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--text);
   display: block;
+  margin-left: 15%;
   text-align: center;
 }
 

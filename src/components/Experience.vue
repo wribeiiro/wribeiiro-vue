@@ -19,7 +19,10 @@
 export default {
   name: 'Experience',
   props: {
-    xpData: Array,
+    xpData: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

@@ -24,7 +24,10 @@
 export default {
   name: "Education",
   props: {
-    educationData: Array,
+    educationData: {
+      type: Array,
+      required: true
+    }
   },
 };
 </script>
