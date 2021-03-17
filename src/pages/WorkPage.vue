@@ -1,12 +1,18 @@
 <template>
-    <div></div>
+    <div>
+      Works
+      <Header />
+    </div>
 </template>
 
 <script>
+
+import Header from '../components/Header'
+
 export default {
   name: 'WorkPage',
-  props: {
-    msg: String
+  components: {
+    Header
   }
 }
 </script>

@@ -25,6 +25,7 @@
 
 import Header from '../components/Header'
 import Education from '../components/Education'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'EducationPage',
@@ -34,20 +35,14 @@ export default {
   },
   data() {
     return {
-      education: [
-        {
-          title: "Graduated in Systems Analysis and Development At UNOPAR - University North of Paraná ",
-          date: "2015-2018",
-          id: 1
-        },
-        {
-          title: "Information systems (Studied for 1 year) At UNC - Contestado University",
-          date: "2014",
-          id: 2
-        }
-      ]
+      
     }
-  }
+  },
+  computed: {
+    ...mapGetters({
+      education: 'getEducation'
+    })
+  },
 }
 </script>
 

@@ -86,6 +86,11 @@ export default {
   text-align: center;
 }
 
+.link-active {
+  background-color: var(--purple);
+  color: var(--text);
+}
+
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;

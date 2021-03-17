@@ -6,7 +6,7 @@ export default {
         
     },
     mutations: {
-        s
+        
     },
     actions: {
         
