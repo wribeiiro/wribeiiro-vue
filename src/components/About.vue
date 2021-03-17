@@ -1,9 +1,8 @@
 <template>
     <div>
       <div class="about-desc">
-        <span class="heading-meta">About Me</span>
         <h2 class="mypage-heading">Who Am I?</h2>
-        <p v-html="aboutData"></p>
+        <p class="text-justify" v-html="aboutData"></p>
       </div>
     </div>
 </template>

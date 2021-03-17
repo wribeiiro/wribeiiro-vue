@@ -1,8 +1,7 @@
 <template>
     <div>
-      <Header/>
-      <section class="mypage-about" data-section="about">
-        <div class="mypage-narrow-content">
+      <section class="section about">
+        <div class="page-content">
           <div class="col-md-12 form-group">
             <About
               :about-data="aboutMe"
@@ -16,7 +15,6 @@
 
 <script>
 
-import Header from '../components/Header'
 import About from '../components/About'
 import { mapGetters } from 'vuex'
 
@@ -35,7 +33,6 @@ export default {
   },
   components: {
     About,
-    Header
   }
 }
 </script>

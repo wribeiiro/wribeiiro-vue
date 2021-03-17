@@ -1,32 +1,48 @@
 <template>
   <div>
-    <div class="col">
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="https://i.redd.it/qgp0uv0933f21.jpg" alt="Main">
+    <section class="home">
+      <div class="page-content">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <Home
+              :background-data="background"
+              :text-data="text"
+            >
+            </Home>     
           </div>
-        </div>
-      </div> 
-    </div>
-    
-    <Header />
+        </div> 
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
 
-import Header from '../components/Header'
+import Home from '../components/Home'
+import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
+  data() {
+    return {
+      
+    }
+  },
+  computed: {
+    ...mapGetters({
+      background: 'getBackground',
+      text: 'getSmallText'
+    })
+  },
   components: {
-    Header
-  }
+    Home
+  },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .section-home {
+    transition: ease-in 0.5s;
+  }
 </style>

@@ -1,11 +1,9 @@
 <template>
     <div>
-      <Header/>
-      <section class="mypage-contact" data-section="contact">
-        <div class="mypage-narrow-content">
+      <section class="section contact">
+        <div class="page-content">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 col-md-pull-3">
-              <span class="heading-meta">Get in Touch</span>
               <h2 class="mypage-heading">Contact</h2>
             </div>
           </div>
@@ -23,7 +21,6 @@
 
 <script>
 
-import Header from '../components/Header'
 import Contact from '../components/Contact'
 import { mapGetters } from 'vuex'
 
@@ -40,8 +37,7 @@ export default {
     })
   },
   components: {
-    Contact,
-    Header
+    Contact
   }
 }
 </script>

@@ -24,11 +24,32 @@ body {
 }
 
 .main {
-    margin-left: 330px;
-    padding: 0px 10px;
-    margin-top: 40px;
+    width: calc(100% - 285px);
+    float: right;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; 
+}
+
+.main .section {
+    margin: 100px;
+}
+
+.page-content {
+    width: 100%;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }

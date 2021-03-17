@@ -1,19 +1,13 @@
 <template>
     <div>
       Works
-      <Header />
     </div>
 </template>
 
 <script>
 
-import Header from '../components/Header'
-
 export default {
   name: 'WorkPage',
-  components: {
-    Header
-  }
 }
 </script>
 

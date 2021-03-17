@@ -1,12 +1,9 @@
 <template>
     <div>
-      <Header/>
-
-      <section class="mypage-experience" data-section="experience">
-        <div class="mypage-narrow-content">
+      <section class="section experience">
+        <div class="page-content">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 col-md-pull-3">
-              <span class="heading-meta">Experience</span>
               <h2 class="mypage-heading">Work Experience</h2>
             </div>
           </div>
@@ -27,7 +24,6 @@
 
 <script>
 
-import Header from '../components/Header'
 import Experience from '../components/Experience'
 import { mapGetters } from 'vuex'
 
@@ -45,7 +41,6 @@ export default {
   },
   components: {
     Experience,
-    Header
   }
 }
 </script>

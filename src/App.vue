@@ -1,15 +1,23 @@
 <template>
   <div id="app">
     <div class="main">
-      <router-view></router-view>
+      <Header />
+      <transition name="fade">
+        <router-view></router-view>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
 
+import Header from './components/Header'
+
 export default {
   name: 'App',
+  components: {
+    Header
+  }
 }
 </script>
 
