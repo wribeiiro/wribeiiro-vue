@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="home">
-      <div class="page-content">
+      <div class="banner">
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <Home

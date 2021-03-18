@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,400;1,100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Jetbrains Mono';
+    font-family: 'Lato', sans-serif;
+    list-style: none;
 }
 
 body {
-    width: 100%;
-    overflow-x: hidden;
     background-color: var(--black);
     color: var(--text);
+    overflow-x: hidden;
 }
 
 :root {
@@ -21,35 +21,37 @@ body {
     --text: #E1E1E6;
     --purple: #7159C1;
     --vue: #3FB984;
-}
-
-.main {
-    width: calc(100% - 285px);
-    float: right;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s; 
-}
-
-.main .section {
-    margin: 100px;
-}
-
-.page-content {
-    width: 100%;
+    --red: #ec5453;
+    --npurple: #a84cb8;
+    --yellow: #f9bf3f;
 }
 
 a:hover {
     text-decoration: none;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
+.wrapper {
+    display: flex;
+    position: relative;
 }
 
+.wrapper .main_content {
+    width: 100%;
+    margin-left: 260px;
+}
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+.wrapper .main_content .info {
+    margin: 60px;
+    color: var(--text);
+    line-height: 25px;
+}
+
+.wrapper .main_content .info div {
+    margin-bottom: 20px;
+}
+
+@media (max-height: 500px) {
+    .social_media {
+        display: none !important;
+    }
 }

@@ -3,7 +3,7 @@
     <div class="carousel-item active">
       <img class="d-block w-100 hero" :src="backgroundData" alt="Main">
       <div class="overlay">
-        <div class="carousel-caption d-none d-md-block">
+        <div class="carousel-caption d-none d-md-block text-left">
           <h1 v-html="textData"></h1>
           <router-link to="/about" class="btn btn-outline-success">
             <i class="fa fa-code"></i> Let's code 
@@ -52,7 +52,6 @@ export default {
   }
 
   .carousel-caption h1 {
-    text-align: center;
     margin-bottom: 45px;
     font-size: 65px;
   }

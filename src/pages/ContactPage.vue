@@ -1,7 +1,7 @@
 <template>
     <div>
-      <section class="section contact">
-        <div class="page-content">
+      <section class="contact">
+        <div class="info">
           <div class="row">
             <div class="col-md-6 col-md-offset-3 col-md-pull-3">
               <h2 class="mypage-heading">Contact</h2>

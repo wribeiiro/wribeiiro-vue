@@ -1,10 +1,12 @@
 <template>
   <div id="app">
-    <div class="main">
+    <div class="wrapper">
       <Header />
-      <transition name="fade">
-        <router-view></router-view>
-      </transition>
+      <div class="main_content">
+        <vue-page-transition name="fade">
+          <router-view></router-view>
+        </vue-page-transition>
+      </div>
     </div>
   </div>
 </template>

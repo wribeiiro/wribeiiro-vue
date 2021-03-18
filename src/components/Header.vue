@@ -1,24 +1,27 @@
 <template>
     <div>
-      <div class="sidenav">
-        <div class="sidenav__avatar">
+      <div class="sidebar">
+        <div class="sidebar__avatar">
           <div class="text-center me">
+            <img :src="[imgProfile]" alt="">
             <h1 class="name">Wellisson Ribeiro</h1>
             <span class="description">
-              <a href="#">Fullstack Developer</a> <br>in Mafra-SC
+              Fullstack Developer
             </span>
           </div>
         </div>
-        <div class="sidenav__link">
+        <ul>
           <router-link to="/" class="btn mr-5"><i class="fa fa-home"></i> Home</router-link>
           <router-link to="/about" class="btn mr-5"><i class="fa fa-address-card"></i> About</router-link>
           <router-link to="/education" class="btn mr-5"><i class="fa fa-university"></i> Education</router-link>
           <router-link to="/experience" class="btn mr-5"><i class="fa fa-briefcase"></i> Experience</router-link>
           <router-link to="/work" class="btn mr-5"><i class="fa fa-cog"></i> Work</router-link>
           <router-link to="/contact" class="btn mr-5"><i class="fa fa-envelope"></i> Contact</router-link>
-        </div>
-        <div class="sidenav__footer">
-
+        </ul>
+        <div class="social_media">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fa fa-envelope"></i></a>
         </div>
       </div>
     </div>
@@ -28,6 +31,11 @@
 
 export default {
   name: 'Header',
+  data() {
+    return { 
+      imgProfile: "https://avatars.githubusercontent.com/u/20648572?s=460&u=47a55caca6dbc315d1932aaf77eefa20b2002baf&v=4"
+    }
+  }
 }
 
 </script>
@@ -35,77 +43,98 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.sidenav {
+.sidebar {
+  width: 260px;
   height: 100%;
-  width: 300px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
   background-color: var(--dark-gray);
-  overflow-x: hidden;
-  padding-top: 3em;
-  padding-bottom: 40px;
+  padding: 30px 0px;
+  position: fixed;
   transition: 0.5s;
 }
 
-.sidenav .sidenav__link a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
+.sidebar ul {
+  display: block;
+}
+
+.sidebar ul a {
+  padding: 15px;
   font-size: 16px;
   color: var(--text);
-  display: block;
-  margin-left: 15%;
-  margin-bottom: 2px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  width: 100%;
   text-align: left;
-  border: none;
 }
 
-.sidenav .sidenav__link a i {
-  margin-right: 8px;
+.sidebar ul i {
+  padding-right: 8px;
 }
 
-.sidenav .sidenav__link a:hover, .sidenav__link a:active, .sidenav__link a:focus {
-  background-color: var(--purple);
+.sidebar ul a:hover, ul a:active, ul a:focus {
+  border-left: solid 5px var(--purple);
   color: var(--text);
   text-decoration: none;
+  outline: 0;
+  box-shadow: none;
 }
 
-.sidenav__avatar .me {
+.sidebar ul .link-active {
+  border-left: solid 5px var(--purple);
+  color: var(--text);
+}
+
+.sidebar__avatar .me {
   margin-bottom: 30px;
 }
 
-.sidenav__avatar h1 {
+.sidebar__avatar h1 {
   color: var(--text);
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 500;
   display: block;
 }
 
-.sidenav__avatar span {
+.sidebar__avatar span {
   color: var(--text);
   text-align: center;
+  font-weight: 600;
+  font-size: 19px;
 }
 
-.sidenav__avatar span a {
+.sidebar__avatar img {
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.sidebar__avatar span {
   color: var(--purple);
   transition: 0.5s;
   text-align: center;
 }
 
-.link-active {
-  background-color: var(--purple);
-  color: var(--text);
+.sidebar .social_media {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-
-  .sidenav a {
-    font-size: 18px;
-  }
+.sidebar .social_media a {
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 </style>
