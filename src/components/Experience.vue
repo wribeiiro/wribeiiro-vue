@@ -97,7 +97,7 @@ export default {
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
-  color: #fff;
+  color: var(--text);
 }
 
 .timeline-centered
@@ -146,6 +146,7 @@ export default {
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+  border-radius: 5px;
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
@@ -173,7 +174,7 @@ export default {
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {
-  color: #e1e1e6;
+  color: var(--text);
 }
 
 .timeline-centered
@@ -182,11 +183,7 @@ export default {
   .timeline-label
   h2
   span {
-  -webkit-opacity: 0.4;
-  -moz-opacity: 0.4;
-  opacity: 0.4;
-  -ms-filter: alpha(opacity=40);
-  filter: alpha(opacity=40);
+  color: var(--vue);
   font-size: 16px;
 }
 

@@ -25,28 +25,28 @@ export default {
         title: "Full Stack Developer at Support Informática",
         description:
           "Maintenance and development of websites and systems, using	technologies ​​such as PHP, JavaScript, HTML + CSS and MySQL,	Delphi, Visual Basic 6 e MSAccess.",
-        date: "",
+        date: "2016-2018",
         id: 4,
       },
       {
         title: "Analist of Support at Support Informática",
-        description: "2014-2016",
+        description: "Responsible for customer service, via phone and location. System	training. Assembly and maintenance of computers.",
         date:
-          "Responsible for customer service, via phone and location. System	training. Assembly and maintenance of computers.",
+          "2014-2016",
         id: 3,
       },
       {
         title: "Trainee at Social Security",
-        description: "2013-2014",
+        description: "Document management, organization and maintenance of the archive	dead. Digitalization, control, maintenance and distribution of Law Suit.",
         date:
-          "Document management, organization and maintenance of the archive	dead. Digitalization, control, maintenance and distribution of Law Suit.",
+          "2013-2014",
         id: 2,
       },
       {
         title: "Trainee at Town Hall Municipal Mafra-SC",
-        description: "2012-2013",
+        description: "Posting and receiving correspondence, responsible for copy services, and general internal services.",
         date:
-          "Posting and receiving correspondence, responsible for copy services, and general internal services.",
+          "2012-2013",
         id: 1,
       },
     ],

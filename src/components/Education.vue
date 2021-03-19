@@ -34,6 +34,7 @@ export default {
 .panel.panel-default {
   background: var(--dark-gray);
   padding: 15px;
+  border-radius: 5px;
 }
 
 .panel-title a {
