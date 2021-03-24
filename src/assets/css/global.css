@@ -82,6 +82,10 @@ a:hover {
 	color: var(--red);
 }
 
+.text-text {
+	color: var(--text);
+}
+
 .terminal .body,
 .terminal .body span,
 .terminal .body a {

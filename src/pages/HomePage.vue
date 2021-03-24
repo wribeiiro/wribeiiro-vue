@@ -3,7 +3,11 @@
     <section class="home">
       <div class="banner">
         <div class="carousel-inner">
-          <Home :background-data="background" :text-data="text" :second-text-data="secondText" :about-text-data="aboutText"> </Home>
+          <Home 
+            :background-data="background" 
+            :text-data="text" 
+            :second-text-data="secondText" :about-text-data="aboutMe"> 
+          </Home>
         </div>
       </div>
     </section>
@@ -12,20 +16,41 @@
 
 <script>
 import Home from "../components/Home";
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 
 export default {
   name: "HomePage",
   data() {
-    return {};
+    return {
+      aboutMe: ""
+    }
   },
   computed: {
     ...mapGetters({
       background: "getBackground",
       text: "getSmallText",
       secondText: "getSmallSecondText",
-      aboutText: "getAboutMe"
+      aboutText: "getAboutMe",
+      userRoot: "getUserRoot",
+      userRootBlink: "getUserRootBlink"
     }),
+  },
+  methods: {
+    ...mapActions(['updateAboutComplete']),
+
+    setAboutWithRootUser() {
+      this.updateAboutComplete(this.userRoot);
+      this.aboutMe = this.userRoot;
+    },
+    setAboutWithAllData() {
+      let strings = `${this.userRoot}${this.aboutText}${this.userRootBlink}`
+      this.updateAboutComplete(strings);
+      this.aboutMe = strings;
+    }
+  },
+  created() {
+    this.setAboutWithRootUser();
+    setTimeout(this.setAboutWithAllData, 2000);
   },
   components: {
     Home

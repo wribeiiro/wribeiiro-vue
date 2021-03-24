@@ -71,7 +71,7 @@ export default {
 }
 
 .sidebar ul a:hover, ul a:active, ul a:focus {
-  border-left: solid 5px var(--purple);
+  border-left: solid 5px var(--vue);
   color: var(--text);
   text-decoration: none;
   outline: 0;

@@ -35,6 +35,7 @@ export default {
   background: var(--dark-gray);
   padding: 15px;
   border-radius: 5px;
+  border-left: solid 5px var(--vue);
 }
 
 .panel-title a {

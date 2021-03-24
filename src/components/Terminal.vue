@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="terminal space shadow fade-in">
+    <div class="terminal fade-in">
       <div class="top">
         <div class="btns">
           <span class="circle red"></span>
@@ -35,6 +35,7 @@ export default {
   width: 1024px;
   transition: 0.5s;
   margin-top: 25px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 
 .terminal .body {
@@ -92,7 +93,4 @@ export default {
   clear: both;
 }
 
-.shadow {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-}
 </style>

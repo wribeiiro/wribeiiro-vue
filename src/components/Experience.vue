@@ -3,7 +3,7 @@
     <article v-for="xp in xpData" :key="xp.id" class="timeline-entry">
       <div class="timeline-entry-inner">
         <div :class="[`color-${xp.id} timeline-icon`]">
-          <i class="fa fa-pencil-alt"></i>
+          <i class="fa fa-briefcase"></i>
         </div>
         <div class="timeline-label">
           <h2>
@@ -161,6 +161,7 @@ export default {
   -moz-background-clip: padding;
   background-clip: padding-box;
   border-radius: 5px;
+  border-right: solid 5px var(--purple);
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
