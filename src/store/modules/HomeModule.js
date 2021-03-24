@@ -1,6 +1,6 @@
 export default {
     state: {
-        background: "https://i.redd.it/qgp0uv0933f21.jpg",
+        background: "https://www.wribeiiro.com/assets/images/2.jpg",
         smallText: "Wellisson Ribeiro",
         smallSecondText: "PHP Developer"
     },
