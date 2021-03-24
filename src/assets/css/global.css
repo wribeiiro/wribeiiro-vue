@@ -1,57 +1,111 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;1,100;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;1,100;1,400&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-    list-style: none;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	list-style: none;
 }
 
 body {
-    background-color: var(--black);
-    color: var(--text);
-    overflow-x: hidden;
+	background-color: var(--black);
+	color: var(--text);
+	overflow-x: hidden;
 }
 
 :root {
-    --black: #121214;
-    --dark-gray: #212025;
-    --white: #FFFFFF;
-    --text: #E1E1E6;
-    --purple: #7159C1;
-    --vue: #3FB984;
-    --red: #ec5453;
-    --npurple: #a84cb8;
-    --yellow: #f9bf3f;
+	--black: #121214;
+	--dark-gray: #212025;
+	--white: #FFFFFF;
+	--text: #E1E1E6;
+	--purple: #9466FF;
+	--vue: #04D361;
+	--red: #ec5453;
+	--npurple: #373238;
+	--yellow: #f9bf3f;
+	--synth-purple: #F222FF;
+	--synth-blue: #011EFE;
 }
 
 a:hover {
-    text-decoration: none;
+	text-decoration: none;
 }
 
 .wrapper {
-    display: flex;
-    position: relative;
+	display: flex;
+	position: relative;
 }
 
 .wrapper .main_content {
-    width: 100%;
-    margin-left: 260px;
+	width: 100%;
+	margin-left: 260px;
 }
 
 .wrapper .main_content .info {
-    margin: 60px;
-    color: var(--text);
-    line-height: 25px;
+	margin: 60px;
+	color: var(--text);
+	line-height: 25px;
 }
 
 .wrapper .main_content .info div {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 
-@media (max-height: 500px) {
-    .social_media {
-        display: none !important;
-    }
+.btn-outline-vue,
+.btn-outline-vue i {
+	color: var(--vue);
+	background: transparent;
+	background-image: none;
+	border-color: var(--vue);
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: 600;
+}
+
+.btn-outline-vue:hover {
+	color: var(--vue);
+}
+
+.text-vue {
+	color: var(--vue);
+}
+
+.text-purple {
+	color: var(--purple);
+}
+
+.text-red {
+	color: var(--red);
+}
+
+.terminal .body,
+.terminal .body span,
+.terminal .body a {
+	font-family: 'JetBrains Mono', monospace !important;
+}
+
+.blink {
+	animation: blinker 1s infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+@media screen and (max-height: 500px) {
+	.social_media {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.wrapper .main_content {
+		margin-left: 0;
+	}
 }

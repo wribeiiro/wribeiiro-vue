@@ -10,9 +10,6 @@ export default new VueRouter({
             path: '/',
             component: () => import('../pages/HomePage')
         }, {
-            path: '/about',
-            component: () => import('../pages/AboutPage')
-        }, {
             path: '/education',
             component: () => import('../pages/EducationPage')
         }, {

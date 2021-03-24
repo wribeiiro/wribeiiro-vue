@@ -6,13 +6,12 @@
             <img :src="[imgProfile]" alt="">
             <h1 class="name">Wellisson Ribeiro</h1>
             <span class="description">
-              Fullstack Developer
+              PHP Developer
             </span>
           </div>
         </div>
         <ul>
           <router-link to="/" class="btn mr-5"><i class="fa fa-home"></i> Home</router-link>
-          <router-link to="/about" class="btn mr-5"><i class="fa fa-address-card"></i> About</router-link>
           <router-link to="/education" class="btn mr-5"><i class="fa fa-university"></i> Education</router-link>
           <router-link to="/experience" class="btn mr-5"><i class="fa fa-briefcase"></i> Experience</router-link>
           <router-link to="/work" class="btn mr-5"><i class="fa fa-cog"></i> Work</router-link>
@@ -127,14 +126,23 @@ export default {
 .sidebar .social_media a {
   display: block;
   width: 40px;
-  background: #594f8d;
+  background: var(--purple);
   height: 40px;
   line-height: 45px;
   text-align: center;
   margin: 0 5px;
-  color: #bdb8d7;
+  color: var(--text);
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+
+@media (max-width: 360px) {
+  .sidebar {
+    width: 260px;
+    height: auto;
+    position: relative;
+  }
 }
 
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="timeline-centered">
-    <article v-for="xp in xpData" :key="xp.id" class="timeline-entry ">
+    <article v-for="xp in xpData" :key="xp.id" class="timeline-entry">
       <div class="timeline-entry-inner">
-        <div :class="['color-'+ xp.id + ' timeline-icon']">
+        <div :class="[`color-${xp.id} timeline-icon`]">
           <i class="fa fa-pencil-alt"></i>
         </div>
         <div class="timeline-label">
@@ -138,6 +138,20 @@ export default {
   margin-left: 10px;
 }
 
+.timeline-centered
+  .timeline-entry
+  .timeline-entry-inner
+  .timeline-icon.color-6 {
+  background: var(--yellow);
+}
+
+.timeline-centered
+  .timeline-entry
+  .timeline-entry-inner
+  .timeline-icon.color-7 {
+  background: var(--red);
+}
+
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
   background: var(--dark-gray);
@@ -186,5 +200,4 @@ export default {
   color: var(--vue);
   font-size: 16px;
 }
-
 </style>
