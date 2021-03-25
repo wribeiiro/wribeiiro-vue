@@ -51,19 +51,19 @@ export default {
   transition: 0.5s;
 }
 
-.sidebar ul {
-  display: block;
-}
-
 .sidebar ul a {
   padding: 15px;
   font-size: 16px;
   color: var(--text);
-  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid var(--text);
   border-bottom: 1px solid rgba(0,0,0,0.05);
   border-top: 1px solid rgba(255,255,255,0.05);
+  border-left: solid 5px transparent;
   width: 100%;
   text-align: left;
+  text-decoration: none;
+  display: block;
+  transition: 0.5s;
 }
 
 .sidebar ul i {
@@ -71,7 +71,7 @@ export default {
 }
 
 .sidebar ul a:hover, ul a:active, ul a:focus {
-  border-left: solid 5px var(--vue);
+  border-left: solid 5px var(--purple);
   color: var(--text);
   text-decoration: none;
   outline: 0;

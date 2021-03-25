@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <div class="banner-item">
-      <img class="hero" :src="backgroundData" alt="Main" />
-      <div class="overlay">
-        <div class="banner-caption">
-          <div class="caption-left">
-            <div class="glitch" v-html="textData" :data-text="textData"></div>
-            <p class="text" v-html="secondTextData"></p>
-            <Terminal
-              :about-text="aboutTextData"
-            >
-            </Terminal>
-          </div>
+  <div class="home banner">
+    <div class="banner-image" :style="{ 'background': 'url('+backgroundData+')' }">
+      <div class="banner-caption">
+        <div class="caption-text text-left">
+          <div class="glitch" v-html="textData" :data-text="textData"></div>
+          <p class="text" v-html="secondTextData"></p>
+          <Terminal
+            :about-text="aboutTextData"
+          >
+          </Terminal>
         </div>
       </div>
     </div>
@@ -50,14 +47,21 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.hero {
-  height: 100vh;
-  width: 100%;
+.banner {
+  position: relative;
 }
 
-.overlay {
+.banner-image {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% auto !important;
+  background-repeat: no-repeat;
+}
+
+.banner-image:before {
   position: absolute;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+  content: '';
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   top: 0;
   left: 0;
   height: 100%;
@@ -78,10 +82,6 @@ export default {
   margin-bottom: 60px;
   color: var(--text);
   text-shadow: 2px 3px 0 var(--black);
-}
-
-.banner-caption .caption-left {
-  text-align: left;
 }
 
 .glitch {

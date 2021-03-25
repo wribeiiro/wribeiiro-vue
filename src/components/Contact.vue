@@ -1,15 +1,13 @@
 <template>
   <div>
-    <div class="container-flex">
-      <div class="contact-items" v-for="contact in contactData" :key="contact.id">
-        <a :href="[contact.href]">
-          <div class="contacts">
-            <div class="contacts-icon">
-              <i :class="[contact.icon]"></i>
-            </div>
+    <div class="contact-item" v-for="contact in contactData" :key="contact.id">
+      <a :href="[contact.href]">
+        <div class="contact-content">
+          <div class="contact-icon">
+            <i :class="[contact.icon]"></i>
           </div>
-        </a>
-      </div>
+        </div>
+      </a>
     </div>
   </div>
 </template>
@@ -28,32 +26,33 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .container-flex {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-  }
-
-  .contacts {
+ 
+  .contact-item {
     width: 120px;
     height: 120px;
     background: var(--dark-gray);
     padding: 50px;
     margin: 30px;
-    position: relative;
     border-radius: 5px;
+    position: relative;
+    flex: 1;
   }
   
-  .contacts .contacts-icon i {
+  .contact-content {
+    position: relative;
+  }
+
+  .contact-content .contact-icon i {
     color: var(--purple);
     font-size: 50px;
     position: absolute;
-    left: 0;
-    top: 40px;
+    margin: 0 auto;
     width: 100%;
     height: 100%;
+    transition: 0.5s;
+  }
+
+  .contact-content .contact-icon i:hover {
+    color: var(--vue);
   }
 </style>

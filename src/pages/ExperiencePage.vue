@@ -2,10 +2,8 @@
   <div>
     <section class="experience">
       <div class="info">
-        <div class="row">
-          <div class="col">
-            <h2 class="mypage-heading">Work Experience</h2>
-          </div>
+        <div class="title">
+            <h2>Work Experience</h2>
         </div>
         <div class="row">
           <div class="col">

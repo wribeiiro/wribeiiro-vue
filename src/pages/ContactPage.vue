@@ -1,22 +1,18 @@
 <template>
-    <div>
-      <section class="contact">
-        <div class="info">
-          <div class="row">
-            <div class="col-md-6 col-md-offset-3 col-md-pull-3">
-              <h2 class="mypage-heading">Contact</h2>
-            </div>
-          </div>
-
-          <div class="row text-center">
-            <Contact 
-              :contact-data="contact"
-            >
-            </Contact>
-          </div>
+  <div>
+    <section class="contact">
+      <div class="info">
+        <div class="title">
+          <h2>Contact</h2>
         </div>
-      </section>
-    </div>
+
+        <Contact 
+          :contact-data="contact"
+        >
+        </Contact>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -44,5 +40,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
 </style>

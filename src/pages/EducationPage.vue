@@ -2,10 +2,8 @@
   <div>
     <section class="education">
       <div class="info">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="mypage-heading">Education</h2>
-          </div>
+        <div class="title">
+          <h2>Education</h2>
         </div>
         <div class="row">
           <div class="col-md-12 timeline-centered">

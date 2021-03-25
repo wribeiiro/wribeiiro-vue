@@ -1,8 +1,8 @@
 <template>
-  <div class="timeline-centered">
+  <div class="experience timeline-centered">
     <article v-for="xp in xpData" :key="xp.id" class="timeline-entry">
       <div class="timeline-entry-inner">
-        <div :class="[`color-${xp.id} timeline-icon`]">
+        <div class="timeline-icon">
           <i class="fa fa-briefcase"></i>
         </div>
         <div class="timeline-label">
@@ -30,6 +30,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .timeline-centered {
   position: relative;
   margin-bottom: 30px;
@@ -100,68 +101,17 @@ export default {
   color: var(--text);
 }
 
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-2 {
-  background: var(--red);
-}
-
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-3 {
-  background: var(--yellow);
-}
-
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-4 {
-  background: var(--npurple);
-}
-
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-5 {
-  background: var(--vue);
-}
-
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-none {
-  background: var(--dark-gray);
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-}
-
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-6 {
-  background: var(--yellow);
-}
-
-.timeline-centered
-  .timeline-entry
-  .timeline-entry-inner
-  .timeline-icon.color-7 {
-  background: var(--red);
-}
-
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
   position: relative;
   background: var(--dark-gray);
-  padding: 1.5em;
-  margin-left: 60px;
+  padding: 1.5rem;
+  margin-left: 80px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
   border-radius: 5px;
-  border-right: solid 5px var(--purple);
+  border-left: solid 5px var(--vue);
+  transition: 0.5s;
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label:after {
@@ -172,7 +122,7 @@ export default {
   height: 0;
   border-style: solid;
   border-width: 9px 9px 9px 0;
-  border-color: transparent var(--dark-gray) transparent transparent;
+  border-color: transparent var(--vue) transparent transparent;
   left: 0;
   top: 10px;
   margin-left: -9px;
@@ -184,8 +134,6 @@ export default {
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 {
   font-size: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label h2 a {

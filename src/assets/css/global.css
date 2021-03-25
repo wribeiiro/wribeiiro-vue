@@ -31,6 +31,10 @@ body {
 	--synth-blue: #011EFE;
 }
 
+a {
+	text-decoration: none;
+}
+
 a:hover {
 	text-decoration: none;
 }
@@ -51,8 +55,23 @@ a:hover {
 	line-height: 25px;
 }
 
-.wrapper .main_content .info div {
+.wrapper .main_content .info {
 	margin-bottom: 20px;
+}
+
+.wrapper .main_content .info .title {
+	margin-bottom: 75px;
+	position: relative;
+}
+
+.wrapper .main_content .info .title:after {
+	position: absolute;
+	content: '';
+	top: 30px;
+	left: 0;
+	border-bottom: solid 3px var(--vue);
+	width: 130px;
+	transition: .5s;
 }
 
 .btn-outline-vue,
@@ -68,6 +87,14 @@ a:hover {
 
 .btn-outline-vue:hover {
 	color: var(--vue);
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
 }
 
 .text-vue {
