@@ -109,7 +109,7 @@ export default {
                 client: "Spotify Widget",
                 description: "",
                 link: "https://github.com/wribeiiro/spotify-widget",
-                image: "",
+                image: "https://user-images.githubusercontent.com/20648572/112703098-ce318800-8ea6-11eb-85bd-59a4450159f9.gif",
                 class: "Web Application",
                 tags: "Javascript;Electron",
             },
