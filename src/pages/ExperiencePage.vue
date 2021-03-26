@@ -5,11 +5,8 @@
         <div class="title">
             <h2>Work Experience</h2>
         </div>
-        <div class="row">
-          <div class="col">
-            <Experience :xp-data="xp"> </Experience>
-          </div>
-        </div>
+
+        <Experience :xp-data="xp"> </Experience>
       </div>
     </section>
   </div>

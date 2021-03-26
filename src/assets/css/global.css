@@ -53,18 +53,19 @@ a:hover {
 	margin: 60px;
 	color: var(--text);
 	line-height: 25px;
+	width: 100%;
 }
 
 .wrapper .main_content .info {
 	margin-bottom: 20px;
 }
 
-.wrapper .main_content .info .title {
+.title {
 	margin-bottom: 75px;
 	position: relative;
 }
 
-.wrapper .main_content .info .title:after {
+.title:after {
 	position: absolute;
 	content: '';
 	top: 30px;
@@ -113,6 +114,7 @@ a:hover {
 	color: var(--text);
 }
 
+.terminal-title,
 .terminal .body,
 .terminal .body span,
 .terminal .body a {

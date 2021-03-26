@@ -1,13 +1,13 @@
 <template>
   <div>
     <div class="terminal fade-in">
-      <div class="top">
+      <div class="terminal-bar">
         <div class="btns">
           <span class="circle red"></span>
           <span class="circle yellow"></span>
           <span class="circle green"></span>
         </div>
-        <div class="title">wribeiiro@wribeiiro</div>
+        <div class="terminal-title">wribeiiro@wribeiiro: ~</div>
       </div>
       <pre class="body" v-html="aboutText"></pre>
     </div>
@@ -35,7 +35,7 @@ export default {
   width: 1024px;
   transition: 0.5s;
   margin-top: 25px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.98);
 }
 
 .terminal .body {
@@ -47,7 +47,7 @@ export default {
   font-size: 14px;
 }
 
-.terminal .top {
+.terminal .terminal-bar {
   background: var(--black);
   color: var(--text);
   padding: 5px;
@@ -70,7 +70,7 @@ export default {
   border-style: solid;
 }
 
-.title {
+.terminal-title {
   text-align: center;
 }
 

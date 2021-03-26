@@ -6,14 +6,16 @@
           <h2>Works and Projects</h2>
         </div>
 
-        <Work/>
-        <Work/>
-        <Work/>
-        <Work/>
-        <Work/>
-        <Work/>
-        <Work/>
-        <Work/>
+        <div class="work-container">
+          <Work/>
+          <Work/>
+          <Work/>
+          <Work/>
+          <Work/>
+          <Work/>
+          <Work/>
+          <Work/>
+        </div>
       </div>
     </section>
   </div>
@@ -38,13 +40,13 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .work {
+  .work-container {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
+    justify-content: space-evenly;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    position: relative;
+    flex-flow: wrap;
+    width: calc(100% - 120px);
   }
 </style>

@@ -5,11 +5,8 @@
         <div class="title">
           <h2>Education</h2>
         </div>
-        <div class="row">
-          <div class="col-md-12 timeline-centered">
-            <Education :education-data="education"> </Education>
-          </div>
-        </div>
+
+        <Education :education-data="education"> </Education>
       </div>
     </section>
   </div>

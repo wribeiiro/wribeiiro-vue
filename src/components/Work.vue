@@ -29,10 +29,10 @@ export default {
     max-height: 100%;
     background: var(--dark-gray);
     padding: 50px;
-    margin: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
     position: relative;
     border-radius: 5px;
-    flex: 1;
   }
 
   .work-item .work-info {

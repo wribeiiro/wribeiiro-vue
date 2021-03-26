@@ -6,10 +6,9 @@
           <h2>Contact</h2>
         </div>
 
-        <Contact 
-          :contact-data="contact"
-        >
-        </Contact>
+        <div class="contact-container">
+          <Contact :contact-data="contact"></Contact>
+        </div>
       </div>
     </section>
   </div>
@@ -40,12 +39,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-  }
+  
 </style>
