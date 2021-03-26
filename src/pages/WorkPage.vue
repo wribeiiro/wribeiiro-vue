@@ -7,14 +7,12 @@
         </div>
 
         <div class="work-container">
-          <Work/>
-          <Work/>
-          <Work/>
-          <Work/>
-          <Work/>
-          <Work/>
-          <Work/>
-          <Work/>
+            <Work 
+              v-for="work in works" 
+              :key="work.id" 
+              :work-data="work"
+            >
+            </Work>
         </div>
       </div>
     </section>
@@ -24,6 +22,7 @@
 <script>
 
 import Work from '../components/Work'
+import { mapGetters } from 'vuex'
 
 export default {
   name: 'WorkPage',
@@ -34,7 +33,12 @@ export default {
   },
   components: {
     Work
-  }
+  },
+  computed: {
+    ...mapGetters({
+      works: 'getWorks'
+    })
+  },
 }
 </script>
 
@@ -42,11 +46,10 @@ export default {
 <style scoped>
   .work-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    flex-flow: wrap;
-    width: calc(100% - 120px);
+    width: calc(100% - 30px);
   }
 </style>

@@ -1,20 +1,29 @@
 <template>
-  <div class="work-item">
-    <a href="">
-      <div class="work-info">
-        <h3 class="info-title text-center">TITLE</h3>
-        <p class="info-subtitle text-center">SUBTITLE</p>
-        <p class="tags text-center">TAGS</p>
+  <a :href="workData.link" target="_blank">
+    <div class="work-item">
+      <div v-if="workData.image">
+        <img :src="workData.image" :alt="workData.client">
       </div>
-    </a>
-  </div>
+      <div class="work-info">
+        <h3 class="info-title text-left">{{workData.client}}</h3>
+        <p class="info-subtitle text-left">{{workData.description}}</p>
+        <p class="tags text-left">{{workData.tags}}</p>
+        <div class="work-footer">
+          <p><i class="fab fa-github"></i>&nbsp; Github</p>
+        </div>
+      </div>
+    </div>
+  </a>
 </template>
 
 <script>
 export default {
   name: 'Work',
   props: {
-    msg: String
+    workData: Object
+  },
+  created() {
+
   }
 }
 </script>
@@ -23,10 +32,9 @@ export default {
 <style scoped>
 
   .work-item {
-    max-width: 300px;
-    height: 300px;
-    width: 100%;
-    max-height: 100%;
+    max-width: 100%;
+    min-width: 335px;
+    height: 200px;
     background: var(--dark-gray);
     padding: 50px;
     margin-right: 30px;
@@ -35,20 +43,42 @@ export default {
     border-radius: 5px;
   }
 
-  .work-item .work-info {
+  .work-info {
     position: absolute;
     left: 0;
     top: 35%;
     width: 100%;
+    height: 250px;
+    color: var(--text);
+    padding: 0px 15px 0 15px;
+    word-wrap: break-word;
+  }
+
+  .work-info h3 {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 var(--black);
+  }
+
+  .work-info p {
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 0 var(--black);
+  }
+
+  .work-footer p i {
+    font-size: 1.2rem;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     height: 100%;
-    color: var(--text)
-  }
-
-  .work-item .work-info h3 {
-    margin-bottom: 30px;
-  }
-
-  .work-item .work-info p {
-    margin-bottom: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    pointer-events: none;
+    border-radius: 4px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    opacity: 0.3;
   }
 </style>
