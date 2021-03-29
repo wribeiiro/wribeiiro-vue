@@ -60,8 +60,8 @@ export default {
             {
                 client: "Vue Github",
                 description: "",
-                link: "https://github.com/wribeiiro/vue-github",
-                image: "https://github.com/wribeiiro/vue-github/raw/master/src/screenshot.gif",
+                link: "https://www.wribeiiro.com/vue-github",
+                image: "https://user-images.githubusercontent.com/20648572/112877424-67db7e00-90cf-11eb-9f43-b5c070a625b7.gif",
                 class: "Web Application",
                 tags: "HTML;CSS;VueJS",
             },
