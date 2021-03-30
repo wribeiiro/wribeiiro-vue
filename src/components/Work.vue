@@ -2,10 +2,10 @@
   <a :href="workData.link" target="_blank">
     <div class="work-item">
       <div v-if="workData.image">
-        <img :src="workData.image" :alt="workData.client">
+        <img :src="workData.image" :alt="workData.name">
       </div>
       <div class="work-info">
-        <h3 class="info-title text-left">{{workData.client}}</h3>
+        <h3 class="info-title text-left">{{workData.name}}</h3>
         <p class="info-subtitle text-left">{{workData.description}}</p>
         <p class="tags text-left">{{workData.tags}}</p>
         <div class="work-footer">
@@ -21,9 +21,6 @@ export default {
   name: 'Work',
   props: {
     workData: Object
-  },
-  created() {
-
   }
 }
 </script>

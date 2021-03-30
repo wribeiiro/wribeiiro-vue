@@ -13,6 +13,10 @@
               :work-data="work"
             >
             </Work>
+
+            <div v-if="!works.length">
+              <i class="fas fa-spinner fa-spin"></i> Fetching data, please await...
+            </div>
         </div>
       </div>
     </section>
@@ -22,23 +26,27 @@
 <script>
 
 import Work from '../components/Work'
-import { mapGetters } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'WorkPage',
   data() {
     return {
-      
+
     }
   },
   components: {
     Work
+  },
+  created() {
+    this.setWorks()
   },
   computed: {
     ...mapGetters({
       works: 'getWorks'
     })
   },
+  methods: mapActions(['setWorks'])
 }
 </script>
 

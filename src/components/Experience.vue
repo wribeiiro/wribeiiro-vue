@@ -110,7 +110,6 @@ export default {
   -moz-background-clip: padding;
   background-clip: padding-box;
   border-radius: 5px;
-  border-left: solid 5px var(--vue);
   transition: 0.5s;
 }
 
@@ -122,7 +121,7 @@ export default {
   height: 0;
   border-style: solid;
   border-width: 9px 9px 9px 0;
-  border-color: transparent var(--vue) transparent transparent;
+  border-color: transparent var(--dark-gray) transparent transparent;
   left: 0;
   top: 10px;
   margin-left: -9px;

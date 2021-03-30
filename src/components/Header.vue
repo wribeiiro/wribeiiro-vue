@@ -11,16 +11,16 @@
           </div>
         </div>
         <ul>
-          <router-link to="/" class="btn mr-5"><i class="fa fa-home"></i> Home</router-link>
-          <router-link to="/education" class="btn mr-5"><i class="fa fa-university"></i> Education</router-link>
-          <router-link to="/experience" class="btn mr-5"><i class="fa fa-briefcase"></i> Experience</router-link>
-          <router-link to="/work" class="btn mr-5"><i class="fa fa-cog"></i> Work</router-link>
-          <router-link to="/contact" class="btn mr-5"><i class="fa fa-envelope"></i> Contact</router-link>
+          <router-link to="/" class="btn mr-5"> > Home</router-link>
+          <router-link to="/education" class="btn mr-5"> > Education</router-link>
+          <router-link to="/experience" class="btn mr-5"> > Skills &amp; Experience </router-link>
+          <router-link to="/work" class="btn mr-5"> > Works and Projects</router-link>
+          <router-link to="/contact" class="btn mr-5"> > Contact</router-link>
         </ul>
         <div class="social_media">
+          <a href="#"><i class="fa fa-envelope"></i></a>
           <a href="#"><i class="fab fa-linkedin"></i></a>
           <a href="#"><i class="fab fa-github"></i></a>
-          <a href="#"><i class="fa fa-envelope"></i></a>
         </div>
       </div>
     </div>
@@ -117,7 +117,7 @@ export default {
 
 .sidebar .social_media {
   position: absolute;
-  bottom: 0;
+  bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -132,10 +132,8 @@ export default {
   text-align: center;
   margin: 0 5px;
   color: var(--text);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-radius: 5px;
 }
-
 
 @media (max-width: 360px) {
   .sidebar {
