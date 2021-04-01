@@ -34,6 +34,9 @@ export default {
 .education {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;      
+  align-content: center;  
 }
 
 .panel.panel-default {

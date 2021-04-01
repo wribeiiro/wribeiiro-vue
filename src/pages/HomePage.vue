@@ -2,13 +2,11 @@
   <div>
     <section class="home">
       <div class="banner">
-        <div class="carousel-inner">
-          <Home 
-            :background-data="background" 
-            :text-data="text" 
-            :second-text-data="secondText" :about-text-data="aboutMe"> 
-          </Home>
-        </div>
+        <Home 
+          :background-data="background" 
+          :text-data="text" 
+          :second-text-data="secondText" :about-text-data="aboutMe"> 
+        </Home>
       </div>
     </section>
   </div>

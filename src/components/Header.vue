@@ -1,46 +1,76 @@
 <template>
-    <div>
-      <div class="sidebar">
-        <div class="sidebar__avatar">
-          <div class="text-center me">
-            <img :src="[imgProfile]" alt="">
-            <h1 class="name">Wellisson Ribeiro</h1>
-            <span class="description">
-              PHP Developer
-            </span>
-          </div>
-        </div>
-        <ul>
-          <router-link to="/" class="btn mr-5"> > Home</router-link>
-          <router-link to="/education" class="btn mr-5"> > Education</router-link>
-          <router-link to="/experience" class="btn mr-5"> > Skills &amp; Experience </router-link>
-          <router-link to="/work" class="btn mr-5"> > Works and Projects</router-link>
-          <router-link to="/contact" class="btn mr-5"> > Contact</router-link>
-        </ul>
-        <div class="social_media">
-          <a href="#"><i class="fa fa-envelope"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-github"></i></a>
+  <div>
+    <div class="btn-burger" @click="toggleMenu" :class="{ click: isShowing }">
+      <span class="fas fa-bars"></span>
+    </div>
+    <div class="sidebar" :class="{ show: isShowing }">
+      <div class="sidebar__avatar">
+        <div class="text-center me">
+          <img :src="[imgProfile]" alt="" />
+          <h1 class="name text-center">Wellisson Ribeiro</h1>
+          <span class="description"> Fullstack Developer </span>
         </div>
       </div>
+      <ul>
+        <router-link to="/" class="btn mr-5"> > Home </router-link>
+        <router-link to="/education" class="btn mr-5" @click.native="closeMenu"> > Education </router-link>
+        <router-link to="/experience" class="btn mr-5" @click.native="closeMenu"> > Skills &amp; Experience </router-link>
+        <router-link to="/work" class="btn mr-5" @click.native="closeMenu"> > Works and Projects </router-link>
+        <router-link to="/contact" class="btn mr-5" @click.native="closeMenu"> > Contact </router-link>
+      </ul>
     </div>
+  </div>
 </template>
 
 <script>
-
 export default {
-  name: 'Header',
+  name: "Header",
   data() {
-    return { 
-      imgProfile: "https://avatars.githubusercontent.com/u/20648572?s=460&u=47a55caca6dbc315d1932aaf77eefa20b2002baf&v=4"
+    return {
+      isShowing: true,
+      imgProfile: "https://avatars.githubusercontent.com/u/20648572?s=460&u=47a55caca6dbc315d1932aaf77eefa20b2002baf&v=4",
+    };
+  },
+  methods: {
+    toggleMenu: function () {
+      this.isShowing = !this.isShowing;
+    },
+    closeMenu: function () {
+      this.isShowing = false
     }
-  }
-}
-
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.btn-burger {
+  position: absolute;
+  top: 15px;
+  left: 270px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: var(--dark-gray);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: left 0.4s ease;
+  z-index: 99999;
+}
+
+.btn-burger.click {
+  left: 270px;
+}
+
+.btn-burger span {
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+
+.btn-burger.click span:before {
+  content: "\f00d";
+}
 
 .sidebar {
   width: 260px;
@@ -48,7 +78,12 @@ export default {
   background-color: var(--dark-gray);
   padding: 30px 0px;
   position: fixed;
-  transition: 0.5s;
+  transition: left 0.4s ease;
+  left: -260px;
+}
+
+.sidebar.show {
+  left: 0px;
 }
 
 .sidebar ul a {
@@ -56,8 +91,8 @@ export default {
   font-size: 16px;
   color: var(--text);
   border-bottom: 1px solid var(--text);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-left: solid 5px transparent;
   width: 100%;
   text-align: left;
@@ -70,7 +105,9 @@ export default {
   padding-right: 8px;
 }
 
-.sidebar ul a:hover, ul a:active, ul a:focus {
+.sidebar ul a:hover,
+ul a:active,
+ul a:focus {
   border-left: solid 5px var(--purple);
   color: var(--text);
   text-decoration: none;
@@ -115,32 +152,7 @@ export default {
   text-align: center;
 }
 
-.sidebar .social_media {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-}
-
-.sidebar .social_media a {
-  display: block;
-  width: 40px;
-  background: var(--purple);
-  height: 40px;
-  line-height: 45px;
-  text-align: center;
-  margin: 0 5px;
-  color: var(--text);
-  border-radius: 5px;
-}
-
 @media (max-width: 360px) {
-  .sidebar {
-    width: 260px;
-    height: auto;
-    position: relative;
-  }
+  
 }
-
 </style>

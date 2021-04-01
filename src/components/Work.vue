@@ -30,7 +30,7 @@ export default {
 
   .work-item {
     max-width: 100%;
-    min-width: 335px;
+    min-width: 310px;
     height: 200px;
     background: var(--dark-gray);
     padding: 50px;

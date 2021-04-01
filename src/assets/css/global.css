@@ -41,12 +41,11 @@ a:hover {
 
 .wrapper {
 	display: flex;
-	position: relative;
 }
 
 .wrapper .main_content {
 	width: 100%;
-	margin-left: 260px;
+	z-index: -1;
 }
 
 .wrapper .main_content .info {
@@ -60,7 +59,8 @@ a:hover {
 }
 
 .title {
-	margin-bottom: 75px;
+	margin-top: 100px;
+	margin-bottom: 100px;
 	position: relative;
 }
 
@@ -131,13 +131,9 @@ a:hover {
 }
 
 @media screen and (max-height: 500px) {
-	.social_media {
-		display: none !important;
-	}
+
 }
 
 @media screen and (max-width: 360px) {
-	.wrapper .main_content {
-		margin-left: 0;
-	}
+
 }

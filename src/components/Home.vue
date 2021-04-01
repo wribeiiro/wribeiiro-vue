@@ -56,7 +56,11 @@ export default {
   background-repeat: no-repeat;
   background-size: 100% auto !important;
   background-repeat: no-repeat;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  align-content: center;   
+}  
 
 .banner-image:before {
   position: absolute;
@@ -66,14 +70,6 @@ export default {
   left: 0;
   height: 100%;
   width: 100%;
-}
-
-.banner-caption {
-  position: absolute;
-  left: 0;
-  top: 15%;
-  text-align: center;
-  margin-left: 260px;
 }
 
 .banner-caption p {
