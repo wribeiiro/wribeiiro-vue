@@ -34,12 +34,13 @@ export default {
 }
 
 .skill-item {
-  width: 160px;
+  width: calc(10% - 30px);
   height: 160px;
   background: var(--dark-gray);
   padding: 50px;
-  margin-right: 30px;
   margin-bottom: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
   border-radius: 5px;
   position: relative;
 }
