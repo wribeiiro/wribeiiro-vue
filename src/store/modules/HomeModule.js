@@ -1,6 +1,6 @@
 export default {
     state: {
-        background: "https://www.wribeiiro.com/assets/images/2.jpg",
+        background: "https://www.wribeiiro.com/bg-min.jpg",
         smallText: "Wellisson Ribeiro",
         smallSecondText: "Fullstack Developer"
     },
@@ -16,9 +16,9 @@ export default {
         },
     },
     mutations: {
-        
+
     },
     actions: {
-        
+
     }
 }
