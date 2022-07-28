@@ -62,7 +62,7 @@ export default {
 .banner-image:before {
     position: absolute;
     content: '';
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     top: 0;
     left: 0;
     height: 100%;

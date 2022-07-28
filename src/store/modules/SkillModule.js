@@ -50,6 +50,10 @@ export default {
                 title: "Git",
             },
             {
+                icon: 'fa-brands fa-github',
+                title: "Github",
+            },
+            {
                 icon: 'fa-brands fa-docker',
                 title: "Docker",
             }

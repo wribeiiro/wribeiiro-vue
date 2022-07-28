@@ -2,7 +2,7 @@ export default {
     state: {
         background: "https://www.wribeiiro.com/bg-min.jpg",
         smallText: "Wellisson Ribeiro",
-        smallSecondText: "Fullstack Developer"
+        smallSecondText: "PHP Software Engineer"
     },
     getters: {
         getBackground(state) {

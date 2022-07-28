@@ -95,7 +95,7 @@ a:hover {
 }
 
 .text-vue {
-    color: var(--vue);
+    color: var(--vue) !important;
 }
 
 .text-purple {

@@ -17,7 +17,9 @@ export default {
 	name: "HomePage",
 	data() {
 		return {
-			aboutMe: ""
+            strTypeWriter: "",
+			aboutMe: "",
+            i: 0,
 		}
 	},
 	computed: {
@@ -26,26 +28,38 @@ export default {
 			text: "getSmallText",
 			secondText: "getSmallSecondText",
 			aboutText: "getAboutMe",
-			userRoot: "getUserRoot",
-			userRootBlink: "getUserRootBlink"
+            userRoot: "getUserRoot",
+			userRootBlink: "getUserRootBlink",
+            getAboutCommand: "getAboutCommand"
 		}),
 	},
 	methods: {
-		...mapActions(['updateAboutComplete']),
+		...mapActions([
+            'updateAboutComplete',
+        ]),
+        typeWriter() {
+            let aboutCommand = this.getAboutCommand;
+            this.strTypeWriter = this.aboutMe;
 
-		setAboutWithRootUser() {
-			this.updateAboutComplete(this.userRoot);
-			this.aboutMe = this.userRoot;
-		},
-		setAboutWithAllData() {
-			let strings = `${this.userRoot}${this.aboutText}${this.userRootBlink}`
-			this.updateAboutComplete(strings);
-			this.aboutMe = strings;
-		}
+            if (this.i < aboutCommand.length) {
+                this.updateAboutComplete(this.strTypeWriter);
+                this.strTypeWriter += `<span class="text-text">${aboutCommand.charAt(this.i)}</span>`;
+                this.i++;
+                setTimeout(this.typeWriter, 120);
+            }
+
+            this.aboutMe = this.strTypeWriter;
+
+            if (this.i === aboutCommand.length) {
+                setTimeout(() => {
+                    this.aboutMe = this.aboutText + this.userRootBlink;
+                }, 1000);
+            }
+        }
 	},
 	created() {
-		this.setAboutWithRootUser();
-		setTimeout(this.setAboutWithAllData, 2000);
+        this.aboutMe = this.userRoot;
+		this.typeWriter();
 	},
 	components: {
 		Home

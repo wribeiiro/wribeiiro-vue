@@ -2,7 +2,7 @@
 	<div class="contact-container">
 		<div class="contact-item" v-for="contact in contactData" :key="contact.id">
 			<div class="contact-content">
-				<a :href="[contact.href]" target="_blank">
+				<a :href="[contact.href]" target="_blank" title="">
 					<i :class="[contact.icon]"></i>
 				</a>
 			</div>
@@ -36,7 +36,7 @@ export default {
 
 .contact-item {
 	background: var(--dark-gray);
-	padding: 50px;
+	padding: 45px;
 	border-radius: 5px;
 	position: relative;
 	text-align: center;
@@ -44,12 +44,16 @@ export default {
 
 .contact-content {
 	text-align: center;
-	font-size: 70px;
+	font-size: 50px;
 }
 
 .contact-content i {
 	transition: 0.5s;
 	color: var(--purple);
+}
+
+.contact-content i:hover {
+	color: var(--vue);
 }
 
 .contact-content:hover {

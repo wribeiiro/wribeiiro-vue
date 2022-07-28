@@ -10,7 +10,8 @@
 				<div class="text-center me">
 					<img :src="[imgProfile]" alt="Me" title="Me" />
 					<h1 class="name text-center">Wellisson Ribeiro</h1>
-					<span class="description"> PHP Software Engineer ~ English Student 🇧🇷 🇺🇸  </span>
+					<span class="description text-vue"> PHP Software Engineer ~</span>
+					<span class="description"> English Student 🇧🇷 🇺🇸  </span>
 				</div>
 			</div>
 			<ul>

@@ -31,7 +31,7 @@ export default {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: start;
+	justify-content: space-between;
 	align-items: center;
 	align-content: center;
 	column-gap: 1rem;
@@ -41,17 +41,20 @@ export default {
 }
 
 .skill-item {
-	flex: 1;
 	background: var(--dark-gray);
-	padding: 25px;
+	padding: 50px;
 	border-radius: 5px;
 	position: relative;
 	text-align: center;
-    width: 25%;
+    flex: 1 1;
 }
 
 .skill-item:hover {
 	cursor: pointer;
+}
+
+.skill-item i:hover {
+	color: var(--vue);
 }
 
 .skill-content {

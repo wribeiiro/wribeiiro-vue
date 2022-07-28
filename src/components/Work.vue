@@ -31,7 +31,7 @@ export default {
 	background: var(--dark-gray);
 	position: relative;
 	border-radius: 5px;
-	width: 25%;
+	width: 250px;
 	height: 250px;
 	flex-grow: 1;
 }

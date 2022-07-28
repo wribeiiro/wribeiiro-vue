@@ -7,7 +7,7 @@
 					<span class="circle yellow"></span>
 					<span class="circle green"></span>
 				</div>
-				<div class="terminal-title">wribeiiro@wribeiiro: ~</div>
+				<div class="terminal-title">root@wribeiiro: ~</div>
 			</div>
 			<pre class="body" v-html="aboutText"></pre>
 		</div>
