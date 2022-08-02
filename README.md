@@ -1,6 +1,7 @@
 # wribeiiro-vue ~ My Personal Page
 
-![image](https://user-images.githubusercontent.com/20648572/181402294-49e822b3-3b99-422d-a510-7a2972e28fb2.png)
+![me to](https://user-images.githubusercontent.com/20648572/181497702-2c358ee6-7a2b-4b0c-a97f-1fcf2ad74e25.gif)
+
 
 ## Project setup
 ```
