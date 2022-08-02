@@ -7,7 +7,7 @@
 					<span class="circle yellow"></span>
 					<span class="circle green"></span>
 				</div>
-				<div class="terminal-title">root@wribeiiro: ~</div>
+				<div class="terminal-title">{{terminalTitle || 'root@wribeiiro: ~'}}</div>
 			</div>
 			<pre class="body" v-html="aboutText"></pre>
 		</div>
@@ -18,6 +18,10 @@
 export default {
 	name: "Terminal",
 	props: {
+        terminalTitle: {
+            type: String,
+            required: true
+        },
 		aboutText: {
 			type: String,
 			required: true

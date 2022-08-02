@@ -110,6 +110,17 @@ a:hover {
     color: var(--text);
 }
 
+select {
+    background-color: var(--dark-gray);
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+}
+
+section option {
+    cursor: pointer;
+}
+
 .terminal-title,
 .terminal .body,
 .terminal .body span,

@@ -5,7 +5,10 @@
                 <div class="caption-text text-left">
                     <div class="glitch" v-html="textData" :data-text="textData"></div>
                     <p class="text" v-html="secondTextData"></p>
-                    <Terminal :about-text="aboutTextData">
+                    <Terminal
+                        :about-text="aboutTextData"
+                        :terminal-title="terminalTitle"
+                    >
                     </Terminal>
                 </div>
             </div>
@@ -33,6 +36,10 @@ export default {
             required: true
         },
         aboutTextData: {
+            type: String,
+            required: true
+        },
+        terminalTitle: {
             type: String,
             required: true
         }

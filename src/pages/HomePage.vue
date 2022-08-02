@@ -2,7 +2,13 @@
 	<div>
 		<section class="home">
 			<div class="banner">
-				<Home :background-data="background" :text-data="text" :second-text-data="secondText" :about-text-data="aboutMe">
+				<Home
+                    :background-data="background"
+                    :text-data="text"
+                    :second-text-data="secondText"
+                    :about-text-data="aboutMe"
+                    :terminal-title="terminalTitle"
+                >
 				</Home>
 			</div>
 		</section>
@@ -20,6 +26,7 @@ export default {
             strTypeWriter: "",
 			aboutMe: "",
             i: 0,
+            terminalTitle: "root@wribeiiro: ~"
 		}
 	},
 	computed: {
@@ -66,7 +73,3 @@ export default {
 	}
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>

@@ -11,7 +11,12 @@
 					<img :src="[imgProfile]" alt="Me" title="Me" />
 					<h1 class="name text-center">Wellisson Ribeiro</h1>
 					<span class="description text-vue"> PHP Software Engineer ~</span>
-					<span class="description"> English Student 🇧🇷 🇺🇸  </span>
+					<span class="description"> English Student </span>
+
+                    <select name="selectLanguage" id="selectLanguage">
+                        <option value="us" selected>🇺🇸 English</option>
+                        <option value="br">🇧🇷 Portuguese</option>
+                    </select>
 				</div>
 			</div>
 			<ul>
